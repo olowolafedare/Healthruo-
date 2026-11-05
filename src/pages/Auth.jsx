@@ -29,7 +29,7 @@ export default function Auth({mode='login'}){
   }catch(e){setError(e?.message||'Xedruo ID sign-in failed.');}
   finally{setBusy(false);}
  }
- return <main className="min-h-screen grid place-items-center px-5 py-12 bg-[#0b1424] text-slate-100"><section className="w-full max-w-md rounded-2xl rounded-[28px] border border-[#26364f] bg-[#111f33] p-7 shadow-2xl sm:p-9">
+ return <main className="min-h-screen grid place-items-center px-5 py-12 bg-[#0b1424] text-slate-100"><section className="w-full max-w-md rounded-[28px] border border-[#26364f] bg-[#111f33] p-7 shadow-2xl sm:p-9">
   <h1 className="text-3xl font-black leading-tight tracking-tight">{register?'Create your Xedruo account':'Welcome to '+"Healthruo"}</h1>
   <p className="mt-4 text-base leading-7 text-slate-400">{register?'Create your shared Xedruo account with Google, then add your country and phone number.':'Sign in with Google or your Xedruo ID and password. Your session stays inside this company app.'}</p>
   {error&&<div role="alert" className="mt-4 rounded-xl border border-red-300 p-3 text-sm text-red-700">{error}</div>}
